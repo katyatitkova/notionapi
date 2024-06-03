@@ -118,7 +118,7 @@ func (c Cursor) String() string {
 type Date time.Time
 
 func (d *Date) String() string {
-	return time.Time(*d).Format(time.RFC3339)
+	return time.Time(*d).Format("2006-01-02")
 }
 
 func (d Date) MarshalText() ([]byte, error) {
